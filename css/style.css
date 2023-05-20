@@ -1,0 +1,287 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+
+
+header{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 33px 9%;
+    background: transparent;
+    z-index: 1000;
+
+}
+.navList{
+    display: flex;
+}
+
+.navList a{
+    margin-left: 60px;
+    font-size: 15px;
+    font-weight: 600;
+    /* color: white; */
+    border-bottom:2px solid transparent ;
+    transition: all .55s ease-in-out;
+}
+
+.navList a:hover{
+    border-bottom: 2px solid white;
+}
+
+#logo{
+    color: white;
+    font-size: 30px;
+    font-weight: 600;
+
+}
+
+#menu-icon{
+    color: white ;
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+    z-index: 10001;
+
+}
+
+.hero{
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    background-image: linear-gradient( 111.4deg,  rgb(240, 135, 135) 0%, rgb(217, 162, 43) 58% );
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    gap: 7rem;
+
+}
+
+
+
+section{
+    padding: 0 19%;
+}
+
+.hero-text h5{
+    font-size: 14px;
+    font-weight: 400;
+    color: white;
+    margin-bottom: 25px;
+
+}
+
+.hero-text h4{
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    
+}
+
+.hero-text h1{
+    font-family: 'Permanent Marker', cursive;
+    font-size: 80px;
+    line-height: 1;
+    margin: 0 0 35px;
+    
+}
+
+.hero-text p{
+    font-size: 15px;
+    color: rgb(27, 23, 23);
+    line-height: 1.9;
+    margin-bottom: 40px;
+}
+
+
+.hero-img img{
+    width: 250px;
+    height: auto;
+}
+
+.hero-text a {
+    display: inline-block;
+    color: white;
+    background: #eada80;
+    border: 1px solid transparent;
+    padding: 12px 30px; 
+    line-height: 1.4;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 30px;
+    text-transform: capitalize;
+    transition: all .55s ease-in;
+}
+
+.hero-text a:hover{
+    background: transparent;
+    border: 1px solid white;
+    transform: translateX(5px);
+}
+
+.hero-text a.ctaa{
+    background: transparent;
+    border: 1px solid white;
+    margin-left:20px ;
+}
+
+.hero-text a.ctaa i {
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.icons{
+    position: absolute;
+    top: 50%;
+    padding: 0 9%;
+    transform: translateY(-50%);
+
+}
+
+.icons i {
+    display: block;
+    margin: 26px 0;
+    font-size: 24px;
+    color: white;
+
+    transition: all .50s ease;
+}
+
+.icons i:hover{
+    color:  rgb(255, 208, 0);
+    transform: translateY(-5px);
+}
+
+.scroll-down{
+    position: absolute;
+    bottom: 6%;
+    right: 9%;
+}
+
+.scroll-down i {
+    display: block;
+    color: white;
+    font-size: 24px;
+    background: #eada80;
+    border-radius: 30px;
+    padding: 12px;
+    transition: all .50s ease-in;
+}
+
+.scroll-down i:hover{
+    transform: translateY(-5px);
+    background: transparent;
+    border: 1px solid;
+}
+
+@media (max-width : 1535px){
+   header{
+    padding: 15px 3%;
+    transition: .2s;
+   }
+
+   .icons{
+    padding: 0 3%;
+    transition: .2s;
+   }
+
+   .scroll-down{
+    right: 3%;
+    transition: .2s;
+   }
+}
+
+@media (max-width:1460px){
+    section{
+        padding: 0 12%;
+        transition: .2s;
+    }
+}
+
+@media (max-width: 1340px){
+    .hero-img img {
+        width:230px;
+        height: auto;
+    }
+    .hero-text h1{
+        font-size: 75px;
+        margin: 0 0 30px;
+    }
+    .hero-text h5{
+        margin-bottom: 25px;
+    }
+}
+
+
+@media (max-width:1195px){
+    section{
+        padding: 0 3%;
+        transition: .2s;
+    }
+    .hero-text{
+        padding-top: 115px;
+    }
+    .hero-img{
+        text-align: center;
+    }
+    .hero-img img{
+        width: 210px;
+        height: auto;
+    }
+    .hero{
+        height: 100%;
+        gap: 1rem;
+        grid-template-columns: 1fr;
+    }
+    .icons{
+        display: none;
+    }
+    .scroll-down{
+        display: none;
+    }
+}
+
+@media (max-width:990px){
+    #menu-icon{
+        display: block;
+    }
+    .navList{
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 300px;
+        height: 40vh;
+        background: #ffea80a9;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 30px 20px;
+        transition: all .55s ease;
+    }
+    .navList a{
+        margin-left: 0;
+        display: block;
+        margin: 5px 0 ;
+    }
+    .navList.open{
+        right: 0;
+    }
+}
+
+@media (max-width:680px){
+    .hero-img img{
+        width: 180px;
+        height: auto;
+    }
+}
